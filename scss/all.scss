@@ -1,0 +1,198 @@
+@font-face {
+    font-family: 'NK767Regular'; 
+    src: url(../fonts/9888.otf); 
+   }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* base stile */
+$fontArial: 'Arial';
+$FontNK:'NK767Regular';
+$colorWhite:#fff; 
+
+.clearfix:after                                     {content: "";display: table;width: 100%;clear: both;}
+.container                                          { max-width: 1230px; margin:0 auto;}
+
+
+/* / */
+
+header                                              { width:100%; margin:0 auto;
+	.menu                                           { width:100%; background:#f3f3f3; 
+		#touch-menu                                 { font-family:$FontNK; font-size: 16px;padding:15px 0 15px 28px;color:#1331e3; text-decoration: none;display: none; text-transform: uppercase;
+			&:hover                                 { color: #929292}
+		}
+		nav                                         { display: block;
+			ul                                      {
+				li                                  { float: left;
+					a                               { display: block; padding:15px 0 15px 28px; font-family: $fontArial;font-size: 12px; color: #929292;text-decoration: none;
+						&:hover                     { color: #fe0005;}
+					  }
+				 }
+			}
+		}
+	}
+	.header-info                                    { background:#000837; width: 100%;
+		img                                         { float: left; padding: 7px 39px 15px}
+		.registration                               { float: right; padding-top: 12px;padding-right: 14px;
+			ul                                      { padding-bottom: 27px; 
+				li                                  { color: $colorWhite;display:inline-block; padding: 0 20px;
+					&:first-child a                 { text-decoration: none; padding:0 2px; }
+					a                               { color: $colorWhite; font-family:$fontArial; font-size: 12px;
+						&:hover                     { color: #2874ba;}
+					}
+				}
+			}
+			button                                  { position: relative; display: block; color: $colorWhite; background:#33cc00; box-sizing: border-box; border: 1px solid#33cc00;height: 32px;padding: 0 15px 0 40px; outline: none; float: right;
+				.basket                             { position: absolute; top: 7px; left: 12px; display: block; padding: 0 0;}
+				&:hover                             { background:#cc0000; border: none;}
+			}
+		}
+		.center                                     { display: block; max-width: 600px; margin:0 auto;
+			ul                                      { padding-top:15px; display: inline-block;
+				li                                  { padding-bottom: 13px;display: block; float: left; font-family:$FontNK; font-size: 24px; color:$colorWhite; padding-right: 23px; position: relative;
+					&:before                        { display: block; width: 3px;height: 20px; background:$colorWhite; top: 1px; right:5px; position: absolute; content: '';}
+					&:last-child:before             { content: none;}  
+					span                            { color: #04aff8;}
+					p                               { color:#04aff8; font-size: 8px; font-family:$fontArial; position:absolute;}
+				}
+			}
+			.search                                 { display:inline-block; width: 100%;
+				input                               { padding:0 10px; border: none; background:#f1f1f1; outline: none; float: left; width: 80%; height: 32px; box-sizing:border-box;
+					&:focus                         { -webkit-box-shadow: 0 0 1px 1px #9d9d9d;box-shadow: 0 0 1px 1px #9d9d9d;}
+				}
+				button                              { padding: 10px 27px;  border: none;height: 32px; color:$colorWhite;background:#cc0000;outline: none; width: 20%;
+					&:hover                         { border: 1px solid#990000;}
+				 }
+			}
+		}
+	}
+}
+.body                                               { background:rgba(33,33,33,0.99); width: 100%; text-align: center;box-sizing:border-box;
+	ul                                              { padding: 0 14px;
+		li                                          { display:block; color: $colorWhite; float: left; padding: 15px 0; font-family:$FontNK; font-size: 26px;width: 20%; position: relative;text-shadow: 4px 0 6px #010601;box-sizing:border-box;
+			&:hover                                 { background:#3a3434;box-sizing:border-box;}
+/* 			&:first-child                           { text-align: left; }
+&:last-child                            { text-align: right;} */
+			&:after                                 { position: absolute; width: 2px; height: 100%; content: ''; top: 0; background:$colorWhite; right: 0; }
+			&:last-child:after                      { content: none;}
+		}
+	}
+}
+.slider                                             { width: 100%; margin:0 auto;position: relative;
+	.sl                                             { 
+		.sl-slide                                   { width: 100%; height: 343px; margin:0 auto; position: relative; padding: 0;
+			img                                     { width: 100%; height: 100%;}
+			.text-slide                             { max-width: 500px; position: absolute; right:10%;top:20%;
+				h2                                  { font-family: $FontNK; font-size: 49px; line-height: 54px; color:$colorWhite; text-transform: uppercase; text-shadow: 4px 0 6px #010601;}
+				p                                   { color: $colorWhite; font-size: 31px; font-family:$FontNK; text-decoration: line-through;}
+				span                                { font-size: 53px;font-family:$FontNK; display:inline-block; background:#ffe100; color: #000;}
+			}
+			.img-slide                              { position: absolute;left: 20px; bottom: 30px;
+				img                                 {  width: 100%;}
+			}
+		}
+	}
+	.controllers                                     { 
+		.prev                                        { position: absolute; top:50%;left:10px; background: url('../images/left.png') left top no-repeat; content: ''; width: 50px; height: 50px; }
+		.next                                        { position: absolute; top:50%;right:10px; background: url('../images/right.png') left top no-repeat; content: ''; width: 50px; height: 50px;}
+	}
+}
+
+footer                                            { background:transparent url('../images/footer.png') left top repeat; background-size: cover; 
+	ul                                            { 
+		li                                        { float: left; width: 20%; font-family:$FontNK; font-size: 20px; text-transform: uppercase; padding: 15px 0;
+			span                                  { color:#000; display: inline-block; max-width: 100px;}
+			img                                   { display: block;  float: left; padding-right: 10px; width: 50px; height: 50px;}
+			&:last-child span                     { max-width: 125px;}
+		}
+	}
+}
+@media screen and (max-width: 1358px) { 
+	.slider .sl .sl-slide .text-slide{ right: 20px;}
+}
+@media screen and (max-width: 1133px) {
+	header .header-info .registration ul{ padding-bottom: 0px;}
+	header .header-info .registration ul li{display: block; padding: 0;}
+}
+@media screen and (max-width: 1080px) {
+	header .header-info img{ padding:7px 0 15px;}
+	footer ul li:last-child span { max-width: 100px; }
+}
+@media screen and (max-width: 934px) {
+	header .header-info .registration ul{ padding-bottom: 27px;}
+	header .header-info .center ul li{ float: none; padding-left: 20px;}
+	header .header-info .center .search {padding-bottom: 27px; margin: 0 5px;}
+	.body ul li{ font-size: large;}
+}
+@media screen and (max-width: 760px) {
+	header .menu nav ul { display: none;}
+  	header .menu #touch-menu { display: block;}
+   	header .menu nav ul li{ float: none;}
+   	header .menu nav ul li a{ padding: 5px 0 5px 28px;}
+   	header .menu nav ul li a:hover{ border-left: 2px solid#1331e3; color: #1331e3; }
+}
+@media screen and (max-width: 580px) {
+	.slider .sl .sl-slide .text-slide { margin-left: 40px;}
+	.slider .sl .sl-slide .text-slide h2{ font-size: 39px;line-height: 45px; }
+}
+
+@media screen and (max-width: 494px) {
+	.body ul li{ font-size:small;}
+	.body ul li:last-child { text-align: center;}
+	.body ul li:first-child { text-align: center;}
+	footer ul li{ font-size: small;}
+	footer ul li span{ max-width: 50px;}
+	header .header-info img{ float: none; display: inline-block;}
+	header .header-info .registration{ float: none; padding-top: 0; padding-right: 0;}
+	header .header-info .registration button{float: none;}
+	header{ text-align: center;}
+	header .header-info .registration button{ display: inline-block;}
+	.body ul{ padding:0;}
+}
+@media screen and (max-width: 340px) {
+	header .header-info .center .search button{ padding:0;}
+	.body ul li{ font-size:x-small;}
+	footer ul li{ font-size: x-small;}
+	.slider .sl .sl-slide .text-slide h2{ font-size: 30px;line-height: 35px; }
+
+}
